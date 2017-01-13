@@ -360,6 +360,11 @@ textarea[placeholder]{
 	margin-left: 20%;
 }
 
+#contact-section h5{
+	text-align: center;
+	color: #333;
+}
+
 /* Icons */
 
 #social-links {

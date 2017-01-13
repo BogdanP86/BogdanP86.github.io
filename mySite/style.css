@@ -315,7 +315,10 @@
 #contact-section h2{
 	text-align: center;
 }
-
+#contact-section h5{
+	text-align: center;
+	color: #333;
+}
 #contact-div{
 	margin-top:3em;
 }
@@ -360,10 +363,7 @@ textarea[placeholder]{
 	margin-left: 20%;
 }
 
-#contact-section h5{
-	text-align: center;
-	color: #333;
-}
+
 
 /* Icons */
 

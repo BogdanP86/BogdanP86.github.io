@@ -249,7 +249,12 @@
 	margin-bottom: 15%;
 }
 
-#thumbnails a:hover .overlay{
+.thumbnails{
+	height: 100%;
+	width: 100%;
+}
+
+.thumbnails a:hover .overlay{
 	height:35%;
 }
 
@@ -490,7 +495,9 @@ footer h6{
 	#my-work-link-div{
 		margin: 0;
 	}
-
+	.overlay{
+		bottom: 10% !important;
+	}
 	
 	
 	

@@ -1,0 +1,35 @@
+var divs = [];
+var myData;
+
+
+function include(file){
+
+  var script  = document.createElement('script');
+  script.src  = file;
+  script.type = 'text/javascript';
+  script.defer = true;
+
+  document.getElementsByTagName('head')[0].appendChild(script);
+
+}
+	include("http://zen.unomodo.net/divs.js");
+	include("http://zen.unomodo.net/svgs.js");
+
+function init(){ 
+
+	var xmlhttp = new XMLHttpRequest();
+	var url = "http://zen.unomodo.net/copy.json";
+	xmlhttp.onreadystatechange = function() {
+    	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+	        myData = JSON.parse(xmlhttp.responseText);
+	        sendDataToPage(myData);
+   		}
+	};
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+}
+
+function sendDataToPage(myData){
+	addTitle();
+	addDivsToPage(divs,myData);	
+}

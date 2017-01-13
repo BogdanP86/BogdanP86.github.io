@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cerc</title>
+	<style>
+		#canvas {
+			border: 1px solid #000;
+		}
+	</style>
+	<script>
+	
+	var angle = 0;
+	var rad = 50;
+	var cx=250;
+	var cy=250;
+	var x;
+	var y;
+	var sign = 1;
+
+	var requestAnimFrame = (function(){
+	  			return  window.requestAnimationFrame ||
+		          window.webkitRequestAnimationFrame ||
+		          window.mozRequestAnimationFrame    ||
+		          function( callback ){
+		          window.setTimeout(callback, 1000 / 60);
+	          };
+	})();
+
+	function init(){
+		c = document.getElementById("canvas");
+		ctx = c.getContext("2d");
+		
+		draw();
+		
+	}
+
+	/* function cerc(){
+		
+
+		if (startAngle < endAngle-0.05){
+				startAngle+=0.05;
+				draw(x,y,rad);
+				
+				if ((startAngle < Math.PI/2) && (rad<80))	{
+					startAngle+=0.05;
+					rad++;
+					draw(x,y,rad);
+				}
+				if ((startAngle < Math.PI) && (rad>40)){
+					startAngle+=0.05;
+					rad--;
+					draw(x,y,rad);
+				}
+				if ((startAngle < 1.5*Math.PI) && (rad<100)){
+					startAngle+=0.05;1
+					rad++;
+					draw(x,y,rad);
+				}
+			}
+			
+			requestAnimationFrame(cerc);	
+
+			
+		} */
+	function dot(x,y){
+		
+		ctx.moveTo(x,y);
+		ctx.fillStyle = "#000";
+		ctx.fillRect(x,y,2,2);
+		
+	}
+
+	function clear(){
+		ctx.clearRect(0,0,canvas.width,canvas.height);
+	}
+	
+	function draw(){
+			
+			var tx = cx + rad*Math.cos(angle*Math.PI/180);
+    		var ty = cy + rad*Math.sin(angle*Math.PI/180);
+    		if (angle < 360){
+    			
+    			angle++;
+		    	rad+=sign;
+
+		    	dot(tx,ty);
+
+		    	if (rad>100){
+		    		sign = -1;
+		    	}
+
+		    	if (rad == 0){
+		    		sign = 1;
+		    	}
+    		}else{
+    			angle = 0;
+    		}
+		  
+
+			requestAnimationFrame(draw);
+		}
+	</script>
+</head>
+<body onload= "init()">
+	<canvas id="canvas" height="500" width = "500"> </canvas>
+	
+</body>
+</html>

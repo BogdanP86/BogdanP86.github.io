@@ -316,8 +316,8 @@
 	text-align: center;
 }
 #contact-section h5{
-	text-align: center;
-	color: #333;
+	text-align: center !important;
+	color: #8c8c8c !important;
 }
 #contact-div{
 	margin-top:3em;

@@ -161,6 +161,32 @@
 	padding:1em;
 }
 
+/* Angular 2 app */
+
+#angular-app img{
+	margin-top: 3em;
+	width: 265px;
+	height: 160px;
+}
+
+.carousel{
+    background: #F2F2F2;
+	padding: 1em;
+}
+#myCarousel{
+	width: 950px !important;
+}
+.carousel-inner .item img{
+	margin: 0 auto; 
+	margin-top: 0 !important;
+    width: 750px !important;
+	height: 400px !important;
+}
+
+.bs-example{
+	margin: 20px;
+}
+
 /* Weather App */
 
 #weatherApp img{

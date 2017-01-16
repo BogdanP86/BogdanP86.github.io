@@ -163,7 +163,12 @@
 
 /* Angular 2 app and SAP UI5 app */
 
-#angular-app img, #sapui5-app img{
+#angular-app img{
+	margin-top: 3em;
+	width: 265px;
+	height: 160px;
+}
+#sapui5-app img{
 	margin-top: 3em;
 	width: 265px;
 	height: 160px;

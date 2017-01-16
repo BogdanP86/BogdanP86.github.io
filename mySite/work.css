@@ -161,19 +161,24 @@
 	padding:1em;
 }
 
-/* Angular 2 app */
+/* Angular 2 app and SAP UI5 app */
 
-#angular-app img{
+#angular-app img, #sapui5-app img{
 	margin-top: 3em;
 	width: 265px;
 	height: 160px;
+}
+
+.bs-example-modal-lg2{
+	margin-left: -20em;
 }
 
 .carousel{
     background: #F2F2F2;
 	padding: 1em;
 }
-#myCarousel{
+
+#myCarousel, #mySAPCarousel{
 	width: 950px !important;
 }
 .carousel-inner .item img{
